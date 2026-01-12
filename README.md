@@ -45,6 +45,19 @@ This is not just a collection of scripts - it's an intelligent support system th
 
 **Output Location:** `@ronny/` directory
 
+### 🐰 Bunny - Workflow Automation & DevOps Engineer
+**Platform:** macOS/iOS/iPadOS Native Tools & Scripts
+**Role:** Obsidian workflow optimization and system integration specialist
+
+**Core Responsibilities:**
+- **Workflow Automation:** Shortcuts, Keyboard Maestro, Hazel, AppleScript
+- **AI Integration:** Voice-to-text, smart linking, auto-tagging, summarization
+- **Cross-Device Workflows:** Seamless integration across Mac, iPhone, iPad
+- **Process Optimization:** Proactive analysis of Obsidian usage patterns and structure
+- **System Integration:** Calendar, email, tasks, files → Obsidian
+
+**Output Location:** `@bunny/` directory
+
 ### 📚 Obsidian - Knowledge Management Hub
 **Location:** `~/localvault/Chris Notes`
 **Structure:** PARA method (Projects, Areas, Resources, Archive)
@@ -117,10 +130,17 @@ my-pa/
 ├── README.md              # This file - project documentation
 ├── CLAUDE.md              # Conny's system instructions and guidelines
 ├── GEMINI.md              # Ronny's role definition and working principles
-└── @ronny/                # Ronny's research outputs and reports
-    ├── flight_report_leipzig_milan_luxembourg_jan2026.md
-    ├── task_flight_research_milan.md
-    └── task_readme_github.md
+├── BUNNY.md               # Bunny's role definition and technical capabilities
+├── @ronny/                # Ronny's research outputs and reports
+│   ├── flight_report_leipzig_milan_luxembourg_jan2026.md
+│   ├── task_flight_research_milan.md
+│   └── task_readme_github.md
+└── @bunny/                # Bunny's workflows, scripts, and automation
+    ├── workflows/         # Shortcuts, Keyboard Maestro macros
+    ├── templates/         # Obsidian templates
+    ├── scripts/           # Shell scripts, AppleScripts
+    ├── docs/              # Documentation and guides
+    └── proposals/         # Optimization proposals
 ```
 
 **External Integration:**
@@ -137,10 +157,13 @@ my-pa/
 
 ### Task Flow
 1. **User Request** → Conny receives task
-2. **Analysis** → Conny determines if research-intensive
-3. **Delegation** (if needed) → Ronny handles external research
-4. **Execution** → Conny executes with full context from Obsidian
-5. **Documentation** → Results written to Obsidian with journal entry
+2. **Analysis** → Conny determines task type:
+   - Research-intensive → Delegate to Ronny
+   - Automation/workflow → Delegate to Bunny
+   - Strategic/organizational → Conny handles directly
+3. **Execution** → Appropriate agent executes with full context
+4. **Documentation** → Results written to Obsidian with journal entry
+5. **Optimization** → Bunny proactively identifies improvement opportunities
 
 ### Context Preservation
 - **Conny** writes to `000-JOURNAL.md` with unique IDs
@@ -149,8 +172,9 @@ my-pa/
 - **All** decisions and tasks are documented with rationale
 
 ### Collaboration Pattern
-- **Conny:** Strategic thinking, execution, documentation
+- **Conny:** Strategic thinking, execution, coordination, documentation
 - **Ronny:** Data gathering, external research, report generation
+- **Bunny:** Workflow automation, system integration, process optimization
 - **Obsidian:** Single source of truth, context preservation
 - **GitHub:** Configuration versioning, continuity across sessions
 
@@ -173,6 +197,16 @@ my-pa/
 4. Conduct external research
 5. Generate report in `@ronny/` directory
 6. Return results to Conny for integration
+
+### For Bunny (Automation Engineer)
+1. Read `BUNNY.md` for role definition and capabilities
+2. Receive workflow request from Conny or Chris
+3. Analyze current Obsidian usage (read/write access)
+4. Design automation solution
+5. Create proposal in `@bunny/proposals/` if significant change
+6. Implement workflows, scripts, shortcuts in `@bunny/`
+7. Document usage in `@bunny/docs/`
+8. Proactively suggest optimizations based on observations
 
 ### For Users
 - Interact primarily with Conny via Claude Code
