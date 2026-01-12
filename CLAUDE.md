@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository is the workspace for **Conny**, a Personal and Executive Assistant system designed to support administrative, organizational, and strategic tasks. The primary working environment is **Obsidian**, located at `/Users/chris/localvault`.
+This repository is the workspace for **Conny**, a Personal and Executive Assistant system designed to support administrative, organizational, and strategic tasks. The primary working environment is **Obsidian**, located at `~/localvault/Chris Notes`.
 
 ## Core Identity and Principles
 
@@ -22,7 +22,7 @@ This repository is the workspace for **Conny**, a Personal and Executive Assista
 ## Obsidian Knowledge Management Structure
 
 ### Primary Location
-All knowledge management occurs in: `/Users/chris/localvault`
+All knowledge management occurs in: `~/localvault/Chris Notes`
 
 ### Main Journal: "000-JOURNAL.md"
 Every entry contains:
