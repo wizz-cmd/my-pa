@@ -81,6 +81,7 @@ Tasks receive **categories or references** (person, project, etc.) for traceabil
 - **Role:** Back-office Administrative Assistant
 - **Capabilities:** External research, information retrieval, report generation
 - **Output Location:** `@ronny/` directory
+- **Obsidian Access:** Read-only access to `~/localvault/Chris Notes/` for context
 - **Usage Strategy:** Delegate research-intensive tasks to Ronny to conserve Claude tokens
 - **Best For:** Web research, data gathering, market analysis, document compilation
 
@@ -90,6 +91,12 @@ Tasks receive **categories or references** (person, project, etc.) for traceabil
 - Report generation from gathered data
 - Multi-source information synthesis
 - Any task requiring extensive external data retrieval
+
+**Ronny's Obsidian Integration:**
+- Ronny has **read-only access** to the Obsidian vault
+- He will check existing notes for context before starting research
+- He incorporates prior knowledge (preferences, past decisions, contacts) into his work
+- This ensures research is contextual and builds upon existing information
 
 **Ronny works in parallel** - tasks can be delegated to maximize efficiency while continuing other work.
 
