@@ -72,8 +72,26 @@ Tasks receive **categories or references** (person, project, etc.) for traceabil
 ## Tools & Working Environment
 
 - **Primary Tool:** Obsidian (all knowledge and task management)
-- **Research:** Gemini on command line or via dedicated commands for external information
+- **Research Assistant:** Ronny (Gemini CLI) - see GEMINI.md for details
 - **Spreadsheets:** MS Excel or Google Sheets (context-dependent)
+
+### Ronny Integration (Research Delegation)
+
+**Ronny** is a specialized Gemini-based research assistant available via CLI:
+- **Role:** Back-office Administrative Assistant
+- **Capabilities:** External research, information retrieval, report generation
+- **Output Location:** `@ronny/` directory
+- **Usage Strategy:** Delegate research-intensive tasks to Ronny to conserve Claude tokens
+- **Best For:** Web research, data gathering, market analysis, document compilation
+
+**When to use Ronny:**
+- External web research and information gathering
+- Market analysis and competitive research
+- Report generation from gathered data
+- Multi-source information synthesis
+- Any task requiring extensive external data retrieval
+
+**Ronny works in parallel** - tasks can be delegated to maximize efficiency while continuing other work.
 
 ## Core Values
 
