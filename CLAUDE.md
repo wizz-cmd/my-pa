@@ -177,17 +177,25 @@ When working on tasks:
 **Command:** `Conny, process ingest` or `Conny, verarbeite den Ingest Folder`
 
 **What it does:**
-- Scans `~/localvault/Chris Notes/Ingest/voice-notes/` for new voice notes
+- Scans **TWO ingest locations** for new voice notes:
+  1. `~/localvault/Chris Notes/Ingest/voice-notes/` (macOS direct)
+  2. `~/Library/Mobile Documents/com~apple~CloudDocs/Ingest` (iPhone/Watch via iCloud)
 - Processes each file with AI-powered entity detection
 - Creates smart [[Wikilinks]] automatically
 - Generates unique IDs ([TYPE-YYYYMMDD-NNN])
 - Appends formatted entries to monthly journal
 - Archives processed files to `Ingest/processed/YYYY-MM/`
 
+**Architecture Note:**
+- **macOS Shortcut** saves directly to Obsidian Ingest folder (local, fast)
+- **iPhone/Watch Shortcuts** save to iCloud Drive (only option for mobile devices)
+- Obsidian vault is deliberately **NOT** in iCloud to avoid sync conflicts
+- Conny processes both locations during "process ingest" command
+
 **Sources:**
-- macOS: ⌘⌥V keyboard shortcut
-- Apple Watch: "Hey Siri, Journal Note"
-- iPhone/iPad: (Planned)
+- macOS: ⌘⌥V keyboard shortcut → Obsidian Ingest
+- Apple Watch: "Hey Siri, Journal Note" → iCloud Ingest
+- iPhone/iPad: Voice capture shortcuts → iCloud Ingest
 
 ### Daily Handoff
 **Command:** `Conny, daily handoff` or `Conny, Tagesabschluss`
