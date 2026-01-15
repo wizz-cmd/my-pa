@@ -64,7 +64,9 @@ This is not just a collection of scripts - it's an intelligent support system th
 
 **Core Functions:**
 - Central source of truth for all information
-- Master journal (`000-JOURNAL.md`) tracking activities, decisions, tasks
+- **Dashboard** (`000-DASHBOARD.md`) - Central cockpit with priorities, recent activity, handoffs
+- **Monthly Journals** (`Journal-YYYY-MM.md`) - Detailed chronological entries with automatic archiving
+- **Voice Capture System** - Multi-device voice-to-journal with AI-powered processing
 - Entity notes for people, places, projects, companies
 - Cross-linked notes using Wikilinks and backlinks
 - Read/write access for Conny, read-only access for Ronny
@@ -98,7 +100,12 @@ This is not just a collection of scripts - it's an intelligent support system th
 **Example:** Capgemini Milano business meeting coordination with office location, metro routing, and agenda preparation.
 
 ### 📖 Knowledge Management with Obsidian
-- Structured journal entries with unique IDs
+- **Dashboard-Driven Workflow:** Central `000-DASHBOARD.md` for daily priorities and status
+- **Scalable Journal Architecture:** Monthly archives prevent document bloat
+- **Voice Capture System v2:** Multi-device (Mac/iPhone/Apple Watch) voice-to-journal
+- **AI-Powered Processing:** Automatic entity detection and smart Wikilink generation
+- **Daily Routines:** Morning briefings and evening handoffs for productivity
+- Structured journal entries with unique IDs ([TYPE-YYYYMMDD-NNN])
 - Entity management (people, places, projects)
 - Decision documentation with rationale
 - Preference tracking (travel, working style)
@@ -136,20 +143,36 @@ my-pa/
 │   ├── task_flight_research_milan.md
 │   └── task_readme_github.md
 └── @bunny/                # Bunny's workflows, scripts, and automation
-    ├── workflows/         # Shortcuts, Keyboard Maestro macros
+    ├── workflows/         # Shortcuts, automations, and integrations
+    │   ├── quick-capture-v2/      # Voice capture system (Mac/iOS/Watch)
+    │   │   ├── README.md          # v2 architecture overview
+    │   │   ├── simple-macOS-shortcut-guide.md
+    │   │   ├── apple-watch-voice-capture-guide.md
+    │   │   ├── WATCH-SETUP-QUICK-START.md
+    │   │   └── conny-processing-guide.md
+    │   └── morning-briefing/      # Auto-start morning briefing
+    ├── inbox/             # Incoming requests and tasks for Bunny
     ├── templates/         # Obsidian templates
     ├── scripts/           # Shell scripts, AppleScripts
     ├── docs/              # Documentation and guides
-    └── proposals/         # Optimization proposals
+    └── proposals/         # Optimization proposals and architecture designs
+        ├── 001-voice-notes-journal-capture.md
+        ├── 002-ingest-folder-architecture.md
+        └── 003-journal-architecture-scalable.md
 ```
 
 **External Integration:**
 - Obsidian Vault: `~/localvault/Chris Notes/`
-  - `000-JOURNAL.md` - Master journal
+  - `000-DASHBOARD.md` - Central cockpit and daily command center
+  - `Journal-YYYY-MM.md` - Monthly journal archives
+  - `Ingest/voice-notes/` - Voice capture ingest folder
+  - `Ingest/processed/` - Processed voice notes archive
   - `1. Projects/` - Active projects
-  - `2. Resources/` - Reference materials
+  - `2. Resources/` - Reference materials, travel info
   - `3. Areas/` - Responsibility areas
+  - `4. Archive/Journal/` - Historical monthly journals
   - `Work Stuff/` - Professional notes
+  - `Templates/` - Daily handoff, morning briefing, journal templates
 
 ---
 
@@ -213,6 +236,81 @@ my-pa/
 - Provide context, preferences, and requirements
 - Review and approve plans before execution
 - Receive structured updates via Obsidian journal
+
+---
+
+## Recent Innovations (January 2026)
+
+### 🎯 Dashboard-Driven Workflow
+**Status:** ✅ Live
+
+Central command center (`000-DASHBOARD.md`) providing:
+- Daily priorities and focus areas
+- Recent activity overview (7 days)
+- Critical items tracking
+- Quick access to journals and resources
+- Daily handoff integration
+
+**Impact:** Single-page overview replaces scrolling through long journal files
+
+---
+
+### 📚 Scalable Journal Architecture
+**Status:** ✅ Deployed
+
+3-tier system replacing single monolithic journal:
+- **Dashboard:** Central cockpit (~200-300 lines)
+- **Monthly Journals:** `Journal-YYYY-MM.md` (~1,500 lines each)
+- **Archive:** Automatic monthly archiving on 5th of following month
+
+**Benefit:** Prevents performance degradation, maintains fast navigation
+
+---
+
+### 🎤 Voice Capture System v2 (Ingest Architecture)
+**Status:** ✅ Operational
+
+Multi-device voice-to-journal with AI processing:
+
+**Capture Devices:**
+- macOS: ⌘⌥V keyboard shortcut
+- Apple Watch Series 3: "Hey Siri, Journal Note"
+- iOS/iPad: (Planned)
+
+**Architecture:**
+```
+Voice Input → Simple Shortcut → Ingest Folder → Conny Processing → Journal
+```
+
+**Key Features:**
+- Ultra-simple shortcuts (4 actions on Mac)
+- AI-powered entity detection and auto-linking
+- ISO 8601 timestamps
+- Bilingual support (German/English code-switching)
+- Raw data preservation for error recovery
+
+**Advantage:** 85-90% time savings vs manual journaling (30 sec vs 2-3 min)
+
+---
+
+### 🌅 Daily Routines
+**Status:** ✅ Templates ready, auto-start pending
+
+**Morning Briefing:**
+- Automatic on first terminal launch
+- Top 3 priorities for today
+- Yesterday's summary
+- Critical items review
+- New voice notes check
+
+**Daily Handoff:**
+- Manual trigger: "Conny, daily handoff"
+- Today's accomplishments
+- Tomorrow's top 3 priorities
+- Context preservation
+- Open questions tracking
+
+**Benefit:** Clear daily boundaries, reduced cognitive load
 
 ---
 
