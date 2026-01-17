@@ -222,6 +222,40 @@ When working on tasks:
 
 **When to use:** Start of day (will be automatic on terminal launch)
 
+### Action Items System
+**Location:** `5. Actions/` - Single Source of Truth für alle Aufgaben
+
+**Structure:**
+- `_active/` - Offene Aufgaben (ACTION-YYYYMMDD-NNN.md)
+- `_completed/YYYY-MM/` - Erledigte Aufgaben (archiviert)
+- `_templates/` - Simple und Complex Templates
+
+**Commands:**
+
+| Befehl | Funktion |
+|--------|----------|
+| `Conny, neue Action: [Titel]` | Erstellt neues Action Item |
+| `Conny, zeige offene Actions` | Listet alle offenen Actions |
+| `Conny, Action erledigt: [ID]` | Markiert Action als completed |
+| `Conny, archive completed actions` | Verschiebt erledigte nach _completed |
+
+**ID-Format:** `[ACTION-YYYYMMDD-NNN]`
+
+**Status-Werte:**
+- `open` - Neu, noch nicht begonnen
+- `in_progress` - In Arbeit
+- `blocked` - Wartet auf etwas/jemanden
+- `completed` - Erledigt (wird archiviert)
+
+**Templates:**
+- `action-simple.md` - Für schnelle Tasks (Müll rausbringen)
+- `action-complex.md` - Für koordinierte Aufgaben (Wohnung verkaufsfertig machen)
+
+**Integration:**
+- Journal-Einträge **referenzieren** Actions via `[[ACTION-YYYYMMDD-NNN]]`
+- Dashboard zeigt aktive Actions in der Sektion "📋 Aktive Actions"
+- Bei `process ingest`: Tasks werden automatisch als Action Items angelegt
+
 ### Dashboard Management
 **Primary file:** `000-DASHBOARD.md` - your central command center
 
@@ -230,6 +264,7 @@ When working on tasks:
 - 📥 Quick capture inbox
 - 📊 Recent activity (7 days)
 - ⚠️ Critical items
+- 📋 Aktive Actions (NEU)
 - 🗓️ Upcoming events
 - 💡 Daily handoff
 - 🔗 Quick links
