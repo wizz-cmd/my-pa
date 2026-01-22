@@ -202,6 +202,37 @@ When working on tasks:
 - Apple Watch: "Hey Siri, Journal Note" → iCloud Ingest
 - iPhone/iPad: Voice capture shortcuts → iCloud Ingest
 
+### Meeting Transcription (Plaud Note)
+**Command:** `Conny, process meetings` or `Conny, verarbeite Meetings`
+
+**What it does:**
+- Scans `Ingest/meetings/` for audio files (.m4a, .mp3, .wav)
+- Sends to Plaud API for transcription with Speaker Diarization
+- Creates full Meeting Note in `3. Meetings/YYYY/MM/`
+- Adds summary to monthly Journal
+- Auto-creates Action Items from AI-extracted tasks
+- Archives processed audio to `Ingest/processed/meetings/YYYY-MM/`
+
+**Ingest Locations:**
+1. `~/localvault/Chris Notes/Ingest/meetings/` (macOS)
+2. `~/Library/Mobile Documents/com~apple~CloudDocs/Ingest/meetings/` (iOS/Plaud App)
+
+**Speaker Recognition:**
+- Known speakers mapped via `2. Resources/Speaker-Profiles.md`
+- Unknown speakers: Conny asks for identification
+- Mapping saved for future meetings
+
+**Output:**
+- **Meeting Note:** Full transcript with timestamps, participants, decisions
+- **Journal Entry:** Summary with links to full note
+- **Action Items:** Automatically created in `5. Actions/_active/`
+
+**Prerequisites:**
+- Plaud.ai subscription with API access
+- API Key configured in `@bunny/workflows/meeting-transcription/.env`
+
+**Workflow Location:** `@bunny/workflows/meeting-transcription/`
+
 ### Daily Handoff
 **Command:** `Conny, daily handoff` or `Conny, Tagesabschluss`
 

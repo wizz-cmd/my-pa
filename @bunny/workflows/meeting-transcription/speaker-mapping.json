@@ -1,0 +1,24 @@
+{
+  "description": "Speaker Label zu Person Mapping für Meeting-Transkription",
+  "updated": "2026-01-22",
+  "mappings": {
+    "Speaker 1": null,
+    "Speaker 2": null
+  },
+  "known_voices": {
+    "self": "Christian Schömer"
+  },
+  "frequent_participants": [
+    "Martin Bonatz",
+    "James Luther",
+    "Barbara Tornaghi",
+    "Chiara Diana",
+    "Su Osorio",
+    "Simon Fitch",
+    "Max Berg",
+    "Marcel Hunn",
+    "Marcel Müller",
+    "Gemma",
+    "Benita"
+  ]
+}
