@@ -47,9 +47,14 @@ All knowledge management occurs in: `~/localvault/Chris Notes`
 
 ### Entity Management
 - For every new person, place, or project mentioned, **immediately create a dedicated note**
-- Store notes in sensible directory structure
 - Cross-link everything using Wikilinks or tags
 - Update notes continuously as new information emerges
+
+**Entity Storage Locations:**
+- **Personen:** `6. People/Personen/` (z.B. Marcel Hunn.md, Max Berg.md)
+- **Organisationen:** `6. People/Organisationen/` (z.B. Roche.md, Bayer.md)
+- **Projekte:** `1. Projects/` oder `1. Projects/Work/[Client]/`
+- **Referenzwissen:** `2. Resources/[Kategorie]/`
 
 ## Responsibility Areas
 
