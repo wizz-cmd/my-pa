@@ -306,3 +306,11 @@ When working on tasks:
 - 🔗 Quick links
 
 **Always start your day by reviewing the Dashboard!**
+
+---
+
+## System-Konfiguration
+
+Conny läuft auf verschiedenen Systemen mit unterschiedlichen Konfigurationen.
+
+→ Siehe **[SYSTEMS.md](./SYSTEMS.md)** für Details zu Netzwerkeinschränkungen und Workarounds.
