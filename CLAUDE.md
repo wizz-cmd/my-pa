@@ -24,7 +24,7 @@ This repository is the workspace for **Conny**, a Personal and Executive Assista
 ### Primary Location
 All knowledge management occurs in: `~/localvault/Chris Notes`
 
-### Dashboard & Journal Architecture (v2)
+### Dashboard & Journal Architecture (v3 - Weekly)
 
 **Primary Interface:** `000-DASHBOARD.md` - Central command center
 - Daily priorities and focus areas
@@ -33,13 +33,40 @@ All knowledge management occurs in: `~/localvault/Chris Notes`
 - Daily handoff integration
 - Quick links to resources
 
-**Monthly Journals:** `Journal-YYYY-MM.md` (e.g., `Journal-2026-01.md`)
-- All detailed entries for the month
-- Unique IDs: [TYPE-YYYYMMDD-NNN]
-- Archived automatically on 5th of following month to `4. Archive/Journal/YYYY/`
+**Weekly Journals:** `Journal-YYYY-MM-WXX.md`
+- XX = ISO-Kalenderwoche (01-53)
+- Beispiel: `Journal-2026-01-W04.md` für KW4 (20.-26.01.2026)
+- Max. ~1000 Zeilen pro Datei (ca. 15-20KB)
+- Archived automatically to `4. Archive/Journal/YYYY/` when month completes
+
+**Journal-Datei Struktur:**
+```markdown
+# Journal KW04 - Januar 2026
+**Zeitraum:** 2026-01-20 bis 2026-01-26
+**ISO-Woche:** 04
+
+→ [[000-DASHBOARD|Zurück zum Dashboard]]
+
+---
+
+## 2026-01-24
+### [INFO-20260124-001] Titel
+...
+
+## 2026-01-23
+...
+```
+
+**Einfügelogik für neue Einträge (KRITISCH!):**
+1. Kalenderwoche berechnen (ISO-8601) → richtige Journal-Datei wählen
+2. Datums-Sektion suchen (`## YYYY-MM-DD`)
+3. Falls Sektion existiert: Entry **direkt nach** der Datums-Zeile einfügen (Edit-Tool!)
+4. Falls nicht existiert: Neue Sektion nach Header erstellen (vor älteren Daten)
+5. **NIEMALS** `cat >>`, `echo >>` oder Write am Ende verwenden!
+6. **IMMER** das Edit-Tool mit präziser Position nutzen
 
 **Every journal entry contains:**
-- **Unique ID:** [INFO-20260115-001]
+- **Unique ID:** [TYPE-YYYYMMDD-NNN] (z.B. [INFO-20260124-001])
 - **Zeit (Time):** HH:MM format
 - **Typ:** Information, Decision, Task, Meeting, etc.
 - **Content** with [[Wikilinks]] to entities
@@ -167,7 +194,7 @@ Tasks receive **categories or references** (person, project, etc.) for traceabil
 ## Working Context
 
 When working on tasks:
-1. Always update the **monthly journal** (e.g., `Journal-2026-01.md`) with new information, decisions, tasks, or appointments
+1. Always update the **weekly journal** (e.g., `Journal-2026-01-W04.md`) with new information, decisions, tasks, or appointments
 2. Update **Dashboard** (`000-DASHBOARD.md`) for critical items and priorities
 3. Create or update entity notes as needed (people, places, projects)
 4. Maintain backlinks and cross-references for context building
@@ -188,7 +215,7 @@ When working on tasks:
 - Processes each file with AI-powered entity detection
 - Creates smart [[Wikilinks]] automatically
 - Generates unique IDs ([TYPE-YYYYMMDD-NNN])
-- Appends formatted entries to monthly journal
+- Inserts formatted entries into weekly journal (using Edit-Tool at correct position!)
 - Archives processed files to `Ingest/processed/YYYY-MM/`
 
 **Architecture Note:**
@@ -209,7 +236,7 @@ When working on tasks:
 - Scans `Ingest/meetings/` for audio files (.m4a, .mp3, .wav)
 - Sends to Plaud API for transcription with Speaker Diarization
 - Creates full Meeting Note in `3. Meetings/YYYY/MM/`
-- Adds summary to monthly Journal
+- Adds summary to weekly Journal
 - Auto-creates Action Items from AI-extracted tasks
 - Archives processed audio to `Ingest/processed/meetings/YYYY-MM/`
 
